@@ -201,26 +201,33 @@
         const projects = [
             {
                 id: 1,
-                title: "E-commerce App",
+                title: "Music App",
                 category: "web",
-                image: "placeholder.jpg",
+                image: "project1.jpeg",
                 description: "Application e-commerce complète"
             },
-            {
+          {
                 id: 2,
-                title: "Application Mobile",
-                category: "mobile",
-                image: "placeholder.jpg",
+                title: "Advanced modelign editor",
+                category: "web",
+                image: "project2.jpeg",
                 description: "Application mobile cross-platform"
             },
             {
                 id: 3,
+                title: "Application Mobile",
+                category: "mobile",
+                image: "project4.jpeg",
+                description: "Application mobile cross-platform"
+            },
+            {
+                id: 4,
                 title: "UI Kit",
                 category: "design",
-                image: "placeholder.jpg",
+                image: "project3.jpeg",
                 description: "Kit d'interface utilisateur moderne"
             }
-            // Ajoutez d'autres projets ici
+            
         ];
         
         function renderProjects(filterCategory = 'all') {
