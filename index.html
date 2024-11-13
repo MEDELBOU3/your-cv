@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Avancé - Mohamed El-bouanani</title>
+    <!-- CSS Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Three.js pour les animations 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Particles.js pour les effets de particules -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Bouton de changement de thème -->
+    <div class="theme-switch-wrapper">
+        <button class="theme-switch" onclick="toggleTheme()" aria-label="Toggle dark mode">
+            <svg class="sun" fill="none" stroke="var(--primary-color)" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 6a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6z"/>
+            </svg>
+            <svg class="moon" fill="none" stroke="var(--primary-color)" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <a href="#about" class="floating-nav-item"><i class="fas fa-user"></i></a>
+        <a href="#skills" class="floating-nav-item"><i class="fas fa-code"></i></a>
+        <a href="#projects" class="floating-nav-item"><i class="fas fa-project-diagram"></i></a>
+        <a href="#experience" class="floating-nav-item"><i class="fas fa-briefcase"></i></a>
+        <a href="#contact" class="floating-nav-item"><i class="fas fa-envelope"></i></a>
+    </nav>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <!-- Navigation content reste le même -->
+    </nav>
+
+    <!-- Hero Section avec Particles.js -->
+    <section class="profile-section text-white position-relative">
+        <div id="hero-particles"></div>
+        <div class="container">
+            <!-- Contenu précédent -->
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center" data-aos="fade-right">
+                    <img src="profiel.jpg" alt="Profile" class="profile-img mb-3 floating">
+                </div>
+                <div class="col-md-8" data-aos="fade-left">
+                    <h1 class="display-4 mb-4">Mohamed El-bouanani</h1>
+                    <p class="lead">Développeur Full Stack & Designer UI/UX</p>
+                    <!-- Nouveaux badges technologiques -->
+                    <div class="tech-stack">
+                        <span class="tech-item"><i class="fab fa-react"></i> React</span>
+                        <span class="tech-item"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tech-item"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-item"><i class="fab fa-android"></i> Flutter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistiques Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="stats-card">
+                        <i class="fas fa-code fa-3x mb-3"></i>
+                        <h3 class="counter">50000</h3>
+                        <p>Lignes de Code</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stats-card">
+                        <i class="fas fa-project-diagram fa-3x mb-3"></i>
+                        <h3 class="counter">25</h3>
+                        <p>Projets Complétés</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stats-card">
+                        <i class="fas fa-coffee fa-3x mb-3"></i>
+                        <h3 class="counter">1000</h3>
+                        <p>Tasses de Café</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stats-card">
+                        <i class="fas fa-clock fa-3x mb-3"></i>
+                        <h3 class="counter">2000</h3>
+                        <p>Heures de Code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section avec Graphiques -->
+    <section class="py-5" id="skills">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Compétences</h2>
+            <div class="row">
+                <!-- Graphique Radar des Compétences -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="skillsRadar" class="chart-container"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- Graphique en Barres des Languages -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="languagesBar" class="chart-container"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section avec Filtres -->
+    <section class="py-5" id="projects">
+        <div class="container">
+            <h2 class="text-center mb-5">Projets</h2>
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary" data-filter="all">Tous</button>
+                        <button type="button" class="btn btn-primary" data-filter="web">Web</button>
+                        <button type="button" class="btn btn-primary" data-filter="mobile">Mobile</button>
+                        <button type="button" class="btn btn-primary" data-filter="design">Design</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="projects-grid">
+                <!-- Les projets seront ajoutés dynamiquement ici -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-5" id="experience">
+        <div class="container">
+            <h2 class="text-center mb-5">Expérience</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p>Développeur Full Stack</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2022</h3>
+                        <p>Stage en Développement Mobile</p>
+                    </div>
+                </div>
+                <!-- Autres items de timeline -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact améliorée -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Nom">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Localisation</h4>
+                            <div id="map" style="height: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  </body>
+</html>
+    
