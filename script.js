@@ -220,19 +220,26 @@
                 image: "project4.jpeg",
                 description: "Application mobile cross-platform"
             },
-          {
-                id: 5,
-                title: "Application Mobile",
-                category: "mobile",
-                image: "project5.jpeg",
-                description: "Application mobile cross-platform"
-            },
             {
                 id: 4,
                 title: "UI Kit",
                 category: "design",
                 image: "project3.jpeg",
                 description: "Kit d'interface utilisateur moderne"
+            },
+          {
+                id: 5,
+                title: "UI Kit",
+                category: "design",
+                image: "project6.jpeg",
+                description: "3d modelisation editor"
+            },
+           {
+                id: 6,
+                title: "Application Mobile",
+                category: "mobile",
+                image: "project5.jpeg",
+                description: "Application mobile cross-platform"
             }
             
         ];
