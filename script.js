@@ -220,6 +220,13 @@
                 image: "project4.jpeg",
                 description: "Application mobile cross-platform"
             },
+          {
+                id: 5,
+                title: "Application Mobile",
+                category: "mobile",
+                image: "project5.jpeg",
+                description: "Application mobile cross-platform"
+            },
             {
                 id: 4,
                 title: "UI Kit",
