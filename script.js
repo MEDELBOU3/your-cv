@@ -213,29 +213,43 @@
                 image: "project2.jpeg",
                 description: "Application mobile cross-platform"
             },
-            {
+          {
                 id: 3,
+                title: "Advanced modelign editor",
+                category: "web",
+                image: "project7.jpeg",
+                description: "Application mobile cross-platform"
+            },
+          {
+                id: 4,
+                title: "Advanced modelign editor",
+                category: "web",
+                image: "project8.jpeg",
+                description: "Application mobile cross-platform"
+            },
+            {
+                id: 5,
                 title: "Application Mobile",
                 category: "mobile",
                 image: "project4.jpeg",
                 description: "Application mobile cross-platform"
             },
             {
-                id: 4,
+                id: 6,
                 title: "UI Kit",
                 category: "design",
                 image: "project3.jpeg",
                 description: "Kit d'interface utilisateur moderne"
             },
           {
-                id: 5,
+                id: 7,
                 title: "UI Kit",
                 category: "design",
                 image: "project6.jpeg",
                 description: "3d modelisation editor"
             },
            {
-                id: 6,
+                id: 8,
                 title: "Application Mobile",
                 category: "mobile",
                 image: "project5.jpeg",
