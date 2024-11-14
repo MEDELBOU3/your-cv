@@ -107,3 +107,62 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Typing animation text
+    const texts = ["Développeur Web", "Créatif", "Passionné"];
+    const typingText = document.querySelector('.typing-text');
+    let textIndex = 0;
+
+    function typeText() {
+        let charIndex = 0;
+        const currentText = texts[textIndex];
+        
+        const typing = setInterval(() => {
+            if (charIndex < currentText.length) {
+                typingText.textContent += currentText.charAt(charIndex);
+                charIndex++;
+            } else {
+                setTimeout(() => {
+                    deleteText();
+                }, 2000);
+                clearInterval(typing);
+            }
+        }, 100);
+    }
+
+    function deleteText() {
+        const deleting = setInterval(() => {
+            if (typingText.textContent.length > 0) {
+                typingText.textContent = typingText.textContent.slice(0, -1);
+            } else {
+                textIndex = (textIndex + 1) % texts.length;
+                typeText();
+                clearInterval(deleting);
+            }
+        }, 50);
+    }
+
+    typeText();
+
+    // 3D card effect
+    document.querySelectorAll('.card-3d').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = -(x - centerX) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+    });
+});
