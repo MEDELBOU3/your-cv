@@ -28,106 +28,85 @@
     .btn:active {
         transform: translateY(0);
     }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            backdrop-filter: blur(5px);
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+     .modal {
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
         }
 
         .modal-content {
-            background: white;
-            margin: 15% auto;
-            padding: 30px;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
             border-radius: 15px;
-            width: 90%;
-            max-width: 400px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 2rem;
             position: relative;
-            transform: translateY(-50px);
-            animation: slideIn 0.3s ease forwards;
+            overflow: hidden;
         }
 
-        @keyframes slideIn {
-            to { transform: translateY(0); }
-        }
-
-        .close {
+        .modal-content::before {
+            content: '';
             position: absolute;
-            right: 20px;
-            top: 15px;
-            color: #666;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close:hover {
-            color: #000;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            z-index: -1;
         }
 
         .input-group {
             margin: 20px 0;
+            position: relative;
         }
 
         #promoCode {
             width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-            box-sizing: border-box;
-            text-align: center;
+            padding: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2em;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
         }
 
         #promoCode:focus {
-            border-color: var(--primary-color);
             outline: none;
+            border-color: #fdbb2d;
+            box-shadow: 0 0 15px rgba(253, 187, 45, 0.5);
         }
 
-        .message {
-            margin-top: 15px;
-            font-size: 14px;
-            padding: 10px;
-            border-radius: 5px;
-            display: none;
+        .btn {
+            background: linear-gradient(45deg, #fdbb2d, #b21f1f);
+            border: none;
+            padding: 12px 30px;
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
         }
 
-        .message.error {
-            background-color: #ffebee;
-            color: var(--error-color);
-            display: block;
-        }
-
-        .message.success {
-            background-color: #e8f5e9;
-            color: var(--success-color);
-            display: block;
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .loading {
             display: none;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid var(--primary-color);
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #fdbb2d;
             border-radius: 50%;
+            margin: 20px auto;
             animation: spin 1s linear infinite;
-            margin: 10px auto;
         }
 
         @keyframes spin {
@@ -135,14 +114,39 @@
             100% { transform: rotate(360deg); }
         }
 
-        @media (max-width: 480px) {
-            .modal-content {
-                margin: 30% auto;
-                padding: 20px;
-            }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
         }
 
-.presentation-container {
+        .message.success {
+            background: rgba(40, 167, 69, 0.2);
+            border: 1px solid #28a745;
+        }
+
+        .message.error {
+            background: rgba(220, 53, 69, 0.2);
+            border: 1px solid #dc3545;
+        }
+
+        .promo-hint {
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
+        }
+
+        .attempts-left {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    
+    .presentation-container {
         position: relative;
         width: 100%;
         max-width: 800px; /* Limite la largeur maximale */
