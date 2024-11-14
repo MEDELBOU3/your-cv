@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (isValid) {
                         showMessage('Code promo valide ! Téléchargement en cours...', 'success');
                         setTimeout(() => {
-                            window.location.href = 'https://www.canva.com/design/DAGWdZ6gRz8/EkyfsuN97RY5FznlPUOrJg/view';
+                            window.location.href = 'CV.pdf';
                         }, 1500);
                     } else {
                         attempts++;
