@@ -140,3 +140,54 @@
                 padding: 20px;
             }
         }
+
+.presentation-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px; /* Limite la largeur maximale */
+        margin: 2rem auto; /* Centre le conteneur */
+        padding-top: 141.4286%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .presentation-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .presentation-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .author-link {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        color: #333;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .author-link:hover {
+        color: #0066cc;
+    }
+
+    /* Media queries pour la responsivité */
+    @media (max-width: 768px) {
+        .presentation-container {
+            margin: 1rem auto;
+        }
+    }
