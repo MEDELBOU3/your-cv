@@ -45,6 +45,7 @@
 
         .profile-img {
             width: 200px;
+            margin: 10px auto;
             height: 200px;
             border-radius: 50%;
             border: 5px solid white;
@@ -54,20 +55,23 @@
         .project1-img {
             width: 300px;
             height: 300px;
+            margin: 10px auto;
             border-radius: 50%;
             border: 5px solid white;
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
         .project2-img {
-            width: 400px;
+            width: 500px;
             height: 300px;
+            margin: 10px auto; 
             border: 5px solid white;
+            border-radius: 12px;
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
 
-        .profile-img:hover {
+        .profile-img:hover ,project1-img:hover , project2-img:hover{
             transform: scale(1.05);
         }
 
