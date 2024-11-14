@@ -56,6 +56,49 @@
             backdrop-filter: blur(5px);
             z-index: -1;
         }
+        .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.close::before,
+.close::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s ease;
+}
+
+.close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close:hover::before,
+.close:hover::after {
+    background-color: #ff4444;
+    width: 28px;
+}
+
+.close:hover {
+    transform: rotate(90deg);
+}
 
         .input-group {
             margin: 20px 0;
