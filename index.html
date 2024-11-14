@@ -26,7 +26,9 @@
     </div>
 
     <!-- Particles Background -->
-    <div id="particles-js"></div>
+    <div id="particles-js">
+        
+    </div>
 
     <!-- Bouton de changement de thème -->
     <div class="theme-switch-wrapper">
@@ -230,21 +232,41 @@
             </div>
         </div>
     </section>
- <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Entrez le code promo</h2>
-            <div class="input-group">
-                <input type="text" id="promoCode" placeholder="XXXX-XXXX-XXXX" maxlength="14" autocomplete="off">
-            </div>
-            <button id="submitCode" class="btn">Vérifier</button>
-            <div class="loading" id="loading"></div>
-            <p id="message" class="message"></p>
+   <div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="attempts-left">Essais restants: <span id="attempts">3</span></div>
+        <span class="close btn-close btn-close-white" aria-label="Close"></span>
+        
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Code Promotionnel</h2>
+            <p class="text-light">Entrez votre code pour débloquer des avantages exclusifs</p>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="promoCode" class="form-control" 
+                   placeholder="XXXX-XXXX-XXXX" 
+                   maxlength="14" 
+                   autocomplete="off">
+            <p class="promo-hint">Format: XXXX-XXXX-XXXX</p>
+        </div>
+
+        <button id="submitCode" class="btn">
+            <span class="button-text">Vérifier</span>
+            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+        </button>
+
+        <div class="loading" id="loading"></div>
+        <div id="message" class="message"></div>
+
+        <div class="progress mt-3" style="height: 5px;">
+            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
         </div>
     </div>
+</div>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
   <script src="script.js"></script>
   <script src="script1.js"></script>
   </body>
