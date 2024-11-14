@@ -61,17 +61,9 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
-        .project2-img {
-            width: 350px;
-            height: 280px;
-            margin: 10px auto; 
-            border: 5px solid white;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
+        
 
-        .profile-img:hover ,project1-img:hover , project2-img:hover{
+        .profile-img:hover ,project1-img:hover{
             transform: scale(1.05);
         }
 
