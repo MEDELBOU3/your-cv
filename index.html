@@ -16,6 +16,7 @@
     <!-- Particles.js pour les effets de particules -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
    
 </head>
 <body>
@@ -74,6 +75,8 @@
                         <span class="tech-item"><i class="fab fa-python"></i> Python</span>
                         <span class="tech-item"><i class="fab fa-android"></i> Flutter</span>
                     </div>
+
+                     <button id="downloadBtn" class="btn">Télécharger le CV</button>
                 </div>
             </div>
         </div>
@@ -216,7 +219,18 @@
             </div>
         </div>
     </section>
-
+ <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Entrez le code promo</h2>
+            <div class="input-group">
+                <input type="text" id="promoCode" placeholder="XXXX-XXXX-XXXX" maxlength="14" autocomplete="off">
+            </div>
+            <button id="submitCode" class="btn">Vérifier</button>
+            <div class="loading" id="loading"></div>
+            <p id="message" class="message"></p>
+        </div>
+    </div>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
