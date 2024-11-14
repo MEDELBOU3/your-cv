@@ -7,6 +7,7 @@
      .btn {
             background-color: var(--primary-color);
             color: white;
+            z-index: 1;
             padding: 15px 35px;
             border: none;
             border-radius: 25px;
