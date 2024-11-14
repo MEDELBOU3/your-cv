@@ -245,7 +245,7 @@
                 id: 7,
                 title: "UI Kit",
                 category: "design",
-                image: "project6.jpeg",
+                image: "https://github.com/MEDELBOU3/gemini-ai-chatbot/blob/main/tables.jpeg?raw=true",
                 description: "3d modelisation editor"
             },
            {
